@@ -1,0 +1,18 @@
+[movement]
+	# Deprecated migration source. Runtime force sprint is stored in the active Profile.
+	forceSprint = true
+
+[migration]
+	# Internal migration marker for versioned Profile storage.
+	profileVersion = 1
+
+[combat]
+	# Play the legacy blocking animation when holding a sword and using it.
+	swordBlockingAnimation = false
+
+[serverWindowAppearance]
+	# Allow the connected server to customize the Minecraft window title.
+	allowTitle = true
+	# Allow the connected server to customize the native window title bar colors.
+	allowFrame = true
+

@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "default",
+  "name": "Default",
+  "features": {
+    "forceSprint": {
+      "enabled": true
+    },
+    "blockOutline": {
+      "enabled": false,
+      "color": "#CCFFFFFF"
+    },
+    "lowFire": {
+      "enabled": false,
+      "verticalOffset": 0.2
+    },
+    "fullbright": {
+      "mode": "OFF",
+      "strength": 1.0
+    },
+    "timeChanger": {
+      "mode": "FOLLOW_SERVER",
+      "customTime": 6000
+    },
+    "zoom": {
+      "enabled": true,
+      "activation": "HOLD",
+      "divisor": 4.0,
+      "maxDivisor": 16.0,
+      "animationSpeed": 7.5,
+      "scrollAdjustment": false,
+      "reduceSensitivity": true,
+      "smoothCamera": false
+    },
+    "hitColor": {
+      "enabled": false,
+      "color": "#80FF0000"
+    }
+  }
+}
+

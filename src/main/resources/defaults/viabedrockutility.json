@@ -1,0 +1,24 @@
+{
+  "preset": "BALANCED",
+  "tier1": {
+    "distance": 18.0,
+    "frameInterval": 3
+  },
+  "tier2": {
+    "distance": 36.0,
+    "frameInterval": 5
+  },
+  "tier3": {
+    "distance": 56.0,
+    "frameInterval": 8
+  },
+  "renderCullDistance": 40.0,
+  "textDisplayCullDistance": 64.0,
+  "maxAnimatedEntitiesPerFrame": 24,
+  "maxAnimatedPlayersPerFrame": 24,
+  "animationThrottleInterval": 4,
+  "particleTickLodEnabled": true,
+  "particleTickLodNearDistance": 18,
+  "particleTickLodFarDistance": 36
+}
+

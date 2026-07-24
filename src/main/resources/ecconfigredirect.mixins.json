@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "package": "net.easecation.ecconfigredirect.mixin",
+  "plugin": "net.easecation.ecconfigredirect.mixin.EcConfigDirectoryRedirectPlugin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [],
+  "client": [
+    "IrisShaderPackDirectoryMixin",
+    "MinecraftResourcePackDirectoryMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

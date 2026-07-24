@@ -1,0 +1,23 @@
+### Gradle ###
+.gradle
+build/
+
+### IntelliJ IDEA ###
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+
+### Eclipse ###
+.classpath
+.project
+.settings/
+bin/
+
+### VS Code ###
+.vscode/
+
+### Minecraft Modding ###
+run/
+logs/
