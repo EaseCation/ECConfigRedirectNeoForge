@@ -16,3 +16,7 @@
 	# Allow the connected server to customize the native window title bar colors.
 	allowFrame = true
 
+[automaticDefaults]
+	# Whether the one-time GPU-based initial render distance is still pending.
+	renderDistanceAutoPending = true
+

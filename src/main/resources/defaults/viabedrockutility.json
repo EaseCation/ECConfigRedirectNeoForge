@@ -1,24 +1,50 @@
 {
+  "configVersion": 3,
+  "optimizationMode": "AUTO",
+  "manualPreset": "BALANCED",
   "preset": "BALANCED",
   "tier1": {
-    "distance": 18.0,
-    "frameInterval": 3
+    "distance": 20.0,
+    "frameInterval": 2
   },
   "tier2": {
-    "distance": 36.0,
-    "frameInterval": 5
+    "distance": 40.0,
+    "frameInterval": 4
   },
   "tier3": {
-    "distance": 56.0,
-    "frameInterval": 8
+    "distance": 64.0,
+    "frameInterval": 6
   },
-  "renderCullDistance": 40.0,
-  "textDisplayCullDistance": 64.0,
-  "maxAnimatedEntitiesPerFrame": 24,
-  "maxAnimatedPlayersPerFrame": 24,
-  "animationThrottleInterval": 4,
+  "renderCullDistance": 64.0,
+  "frozenMeshEnabled": true,
+  "frozenMeshEnterDistance": 24.0,
+  "frozenMeshExitDistance": 20.0,
+  "frozenMeshMaxGpuBytes": 134217728,
+  "textDisplayCullDistance": 80.0,
+  "maxAnimatedEntitiesPerFrame": 32,
+  "maxAnimatedPlayersPerFrame": 32,
+  "animationThrottleInterval": 3,
   "particleTickLodEnabled": true,
-  "particleTickLodNearDistance": 18,
-  "particleTickLodFarDistance": 36
+  "particleTickLodNearDistance": 20,
+  "particleTickLodFarDistance": 40,
+  "customSettings": {
+    "tier1Distance": 20.0,
+    "tier1FrameInterval": 2,
+    "tier2Distance": 40.0,
+    "tier2FrameInterval": 4,
+    "tier3Distance": 64.0,
+    "tier3FrameInterval": 6,
+    "renderCullDistance": 64.0,
+    "textDisplayCullDistance": 80.0,
+    "maxAnimatedEntitiesPerFrame": 32,
+    "maxAnimatedPlayersPerFrame": 32,
+    "animationThrottleInterval": 3,
+    "frozenMeshEnabled": true,
+    "frozenMeshEnterDistance": 24.0,
+    "frozenMeshExitDistance": 20.0,
+    "frozenMeshMaxGpuBytes": 134217728,
+    "particleTickLodEnabled": true,
+    "particleTickLodNearDistance": 20,
+    "particleTickLodFarDistance": 40
+  }
 }
-
