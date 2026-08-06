@@ -43,7 +43,10 @@ Bundled defaults are listed in `BundledDefaultConfigsPatch.DEFAULT_FILES`. A def
 is released only when its owning Mod is installed and its destination does not exist.
 Legacy migrated files and player-edited persistent files therefore always win. The
 current bundle covers Sodium, Iris, ImmediatelyFast, IMBlocker, YACL,
-ViaBedrockUtility, and ECClientSettings.
+ViaBedrockUtility, ECClientDiagnostics, and ECClientSettings. The diagnostics
+default uses the production endpoint so the NetEase archive can omit `ec-config`;
+the bootstrap releases it on first startup. A pre-rendered Packwiz channel config
+still wins because bundled defaults never overwrite an existing file.
 
 `ResourcePackDirectoryPatch` prepares and migrates `ec-resourcepacks` in the registry.
 Migration failures are isolated and logged like other compatibility work; the client-side

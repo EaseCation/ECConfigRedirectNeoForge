@@ -1,0 +1,23 @@
+schema_version = 1
+
+[destination]
+endpoint = "https://je-diag-prod.easecation.net"
+recipient = "EaseCation团队"
+
+[collection]
+log_tail_max_bytes = 262144
+log_tail_max_lines = 1000
+primary_report_max_bytes = 131072
+bundle_max_bytes = 1048576
+retain_local_days = 7
+max_pending_reports = 30
+max_local_bytes = 67108864
+
+[network]
+connect_timeout_seconds = 10
+upload_timeout_seconds = 60
+max_retries = 3
+allow_insecure_http = false
+
+[testing]
+enabled = false

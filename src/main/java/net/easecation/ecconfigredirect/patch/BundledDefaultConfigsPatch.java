@@ -21,6 +21,7 @@ public final class BundledDefaultConfigsPatch {
             file("imblocker", "imblocker.json"),
             file("yet_another_config_lib_v3", "yacl.json5"),
             file("viabedrockutility", "viabedrockutility.json"),
+            file("ec_client_diagnostics", "ec-client-diagnostics.toml"),
             file("ecclientsettings", "ecclientsettings-client.toml"),
             file("ecclientsettings", "ecclientsettings/profiles.json"),
             file("ecclientsettings", "ecclientsettings/profiles/default.json"));
@@ -90,4 +91,3 @@ public final class BundledDefaultConfigsPatch {
     public record DefaultConfigFile(String modId, String resourcePath, Path relativePath) {
     }
 }
-

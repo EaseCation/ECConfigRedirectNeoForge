@@ -96,6 +96,22 @@ class ConfigPatchRegistryTest {
         }
     }
 
+    @Test
+    void installsDiagnosticsDefaultOnlyForItsModAndNeverOverwritesIt() throws Exception {
+        Path diagnosticsConfig = temporaryDirectory.resolve("ec-config/ec-client-diagnostics.toml");
+
+        BundledDefaultConfigsPatch.apply(context(Set.of()));
+        assertFalse(Files.exists(diagnosticsConfig));
+
+        ConfigPatchContext diagnosticsContext = context(Set.of("ec_client_diagnostics"));
+        BundledDefaultConfigsPatch.apply(diagnosticsContext);
+        assertTrue(Files.readString(diagnosticsConfig).contains("https://je-diag-prod.easecation.net"));
+
+        Files.writeString(diagnosticsConfig, "player-value");
+        BundledDefaultConfigsPatch.apply(diagnosticsContext);
+        assertEquals("player-value", Files.readString(diagnosticsConfig));
+    }
+
     private ConfigPatchContext context(Set<String> installedMods) {
         return new ConfigPatchContext(
                 temporaryDirectory,
