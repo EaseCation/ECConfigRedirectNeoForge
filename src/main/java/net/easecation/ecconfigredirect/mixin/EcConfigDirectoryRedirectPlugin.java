@@ -17,11 +17,14 @@ import java.util.Set;
 public final class EcConfigDirectoryRedirectPlugin implements IMixinConfigPlugin {
 
     private static boolean installed;
+    private boolean immediatelyFastLoaded;
 
     @Override
     public synchronized void onLoad(String mixinPackage) {
         if (!installed && isClientEnvironment()) {
-            ConfigPatchRegistry.applyAll(ConfigPatchContext.forCurrentGame());
+            ConfigPatchContext context = ConfigPatchContext.forCurrentGame();
+            this.immediatelyFastLoaded = context.isModLoaded("immediatelyfast");
+            ConfigPatchRegistry.applyAll(context);
             installed = true;
         }
     }
@@ -47,6 +50,9 @@ public final class EcConfigDirectoryRedirectPlugin implements IMixinConfigPlugin
 
     @Override
     public boolean shouldApplyMixin(String targetClassName, String mixinClassName) {
+        if (mixinClassName.contains("ImmediatelyFastMap")) {
+            return this.immediatelyFastLoaded;
+        }
         return true;
     }
 
@@ -67,4 +73,3 @@ public final class EcConfigDirectoryRedirectPlugin implements IMixinConfigPlugin
     public void postApply(String targetClassName, ClassNode targetClass, String mixinClassName, IMixinInfo mixinInfo) {
     }
 }
-

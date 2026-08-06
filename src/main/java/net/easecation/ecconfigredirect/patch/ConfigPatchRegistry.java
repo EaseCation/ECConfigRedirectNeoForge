@@ -21,6 +21,11 @@ public final class ConfigPatchRegistry {
                     WARN_AND_CONTINUE,
                     BundledDefaultConfigsPatch::apply),
             new ConfigPatchDefinition(
+                    "disable-unsafe-immediatelyfast-map-atlas-v1",
+                    Set.of("immediatelyfast"),
+                    WARN_AND_CONTINUE,
+                    ImmediatelyFastMapAtlasConfigMigrationPatch::apply),
+            new ConfigPatchDefinition(
                     "bridge-sodium-mixin-config",
                     Set.of("sodium"),
                     WARN_AND_CONTINUE,

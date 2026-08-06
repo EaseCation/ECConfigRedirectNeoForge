@@ -29,6 +29,7 @@ class ConfigPatchRegistryTest {
                 List.of(
                         "migrate-legacy-configs",
                         "install-bundled-defaults",
+                        "disable-unsafe-immediatelyfast-map-atlas-v1",
                         "bridge-sodium-mixin-config",
                         "migrate-legacy-resource-packs",
                         "migrate-legacy-iris-shader-packs",
@@ -94,6 +95,17 @@ class ConfigPatchRegistryTest {
                     Files.exists(context.persistentConfigDirectory().resolve(defaultFile.relativePath())),
                     () -> "Bundled default was not installed: " + defaultFile);
         }
+    }
+
+    @Test
+    void freshImmediatelyFastConfigDisablesMapAtlasByDefault() throws Exception {
+        ConfigPatchContext context = context(Set.of("immediatelyfast"));
+
+        BundledDefaultConfigsPatch.apply(context);
+
+        String config = Files.readString(
+                context.persistentConfigDirectory().resolve("immediatelyfast.json"));
+        assertTrue(config.contains("\"map_atlas_generation\": false"));
     }
 
     private ConfigPatchContext context(Set<String> installedMods) {
