@@ -8,7 +8,9 @@
     },
     "blockOutline": {
       "enabled": false,
-      "color": "#CCFFFFFF"
+      "color": "#CCFFFFFF",
+      "fillEnabled": false,
+      "fillColor": "#4DFFFFFF"
     },
     "lowFire": {
       "enabled": false,
@@ -38,4 +40,3 @@
     }
   }
 }
-
